@@ -1,0 +1,35 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+cmd = "go build -o ./tmp/main ."
+# ' c m d ' 에 서 바 이 너 리 파 일 을 생 성 한 다 .
+bin = "tmp/main"
+
+# 8 8 번 포 트 를 사 용 하 도 록 실 행 시 인 수 를 지 정
+full_bin = "APP_ENV=dev APP_USER=air ./tmp/main 80"
+
+include_ext = [ "go" , "tpl" , "tmpl", "html"]
+exclude_dir = [ "assets" , "tmp", "vendor", "frontend/node_modules","_tools","cert","testutil"]
+include_dir = []
+exclude_file = []
+exclude_regex = ["_test.go"]
+exclude_unchanged = true
+follow_symlink = true
+log= "air.log"
+delay = 1000
+stop_on_error = true
+send_interrupt = false
+kill_delay = 500
+
+[log]
+time = false
+
+[color]
+main = "magenta"
+watcher = "cyan"
+build = "yellow"
+runner = "green"
+
+[misc]
+clean_on_exit = true
