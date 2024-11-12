@@ -3,7 +3,7 @@
 
 DOCKER_TAG := latest
 build: # # 배 포 용 도 커 이 미 지 빌 드
-	docker build -t junstory/go_todo_app/section62:${DOCKER_TAG} --target deploy ./
+	docker build -t junstory/go_todo_app/week6:${DOCKER_TAG} --target deploy ./
 
 build-local: # \ 로 컬 환 경 용 도 커 이 미 지 빌 드
 	docker compose build --no-cache

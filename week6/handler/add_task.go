@@ -6,7 +6,6 @@ import (
 	"time"
 
 	"github.com/go-playground/validator/v10"
-	"github.com/junstory/go_todo_app/section60/store"
 	"github.com/junstory/go_todo_app/week6/entity"
 	"github.com/junstory/go_todo_app/week6/store"
 )
