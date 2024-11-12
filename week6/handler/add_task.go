@@ -11,7 +11,7 @@ import (
 )
 
 type AddTask struct {
-	Stroe     *store.TaskStore
+	Store     *store.TaskStore
 	Validator *validator.Validate
 }
 
