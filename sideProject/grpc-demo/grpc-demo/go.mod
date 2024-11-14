@@ -1,4 +1,4 @@
-module github.com/junstory/go_todo_app/sideProject.grpc-demo
+module github.com/junstory/go_todo_app/sideProject/grpc-demo/grpc-demo
 
 go 1.18
 
