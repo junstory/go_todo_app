@@ -3,7 +3,7 @@ syntax = "proto3";
 package proto;
 
 // Go 패키지 설정
-option go_package = "github.com/junstory/go_todo_app/sideProject/grpc-demo";
+option go_package = "grpc-demo/proto";
 
 
 service Greeter {
