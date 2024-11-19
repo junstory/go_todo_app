@@ -7,9 +7,9 @@ import (
 	"testing"
 
 	"github.com/go-playground/validator/v10"
-	"github.com/junstory/go_todo_app/week6/entity"
-	"github.com/junstory/go_todo_app/week6/store"
-	"github.com/junstory/go_todo_app/week6/testutil"
+	"github.com/junstory/go_todo_app/week7/entity"
+	"github.com/junstory/go_todo_app/week7/store"
+	"github.com/junstory/go_todo_app/week7/testutil"
 )
 
 func TestAddTask(t *testing.T) {

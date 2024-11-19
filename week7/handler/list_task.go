@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/jmoiron/sqlx"
-	"github.com/junstory/go_todo_app/week6/entity"
-	"github.com/junstory/go_todo_app/week6/store"
+	"github.com/junstory/go_todo_app/week7/entity"
+	"github.com/junstory/go_todo_app/week7/store"
 )
 
 type ListTask struct {

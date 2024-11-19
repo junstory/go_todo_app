@@ -7,8 +7,8 @@ import (
 	"github.com/jmoiron/sqlx"
 
 	"github.com/go-playground/validator/v10"
-	"github.com/junstory/go_todo_app/week6/entity"
-	"github.com/junstory/go_todo_app/week6/store"
+	"github.com/junstory/go_todo_app/week7/entity"
+	"github.com/junstory/go_todo_app/week7/store"
 )
 
 type AddTask struct {
@@ -39,7 +39,7 @@ func (at *AddTask) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		Title:  b.Title,
 		Status: entity.TaskStatusTodo,
 	}
-	err := at.Repo.Task.Create(ctx, at.DB, t)
+	err := at.Repo.AddTask(ctx, at.DB, t)
 	if err != nil {
 		RespondJSON(ctx, w, &ErrResponse{
 			Message: err.Error(),
