@@ -14,10 +14,10 @@ import (
 	"github.com/lestrrat-go/jwx/v2/jwt"
 )
 
-// go:embed cert/secret.pem
+//go:embed cert/secret.pem
 var rawPrivKey []byte
 
-// go:embed cert/public.pem
+//go:embed cert/public.pem
 var rawPubKey []byte
 
 type JWTer struct {
@@ -26,7 +26,7 @@ type JWTer struct {
 	Clocker               clock.Clocker
 }
 
-// go:generate go run github.com/matryer/moq -out moq_test.go . Store
+//go:generate go run github.com/matryer/moq -out moq_test.go . Store
 type Store interface {
 	Save(ctx context.Context, key string, userID entity.UserID) error
 	Load(ctx context.Context, key string) (entity.UserID, error)
@@ -61,7 +61,7 @@ const (
 	UserNameKey = "user_name"
 )
 
-func (j *JWTer) GenerateToken(ctx context.Context, u *entity.User) ([]byte, error) {
+func (j *JWTer) GenerateToken(ctx context.Context, u entity.User) ([]byte, error) {
 	tok, err := jwt.NewBuilder().
 		JwtID(uuid.New().String()).
 		Issuer("github.com/junstory/go_todo_app").
