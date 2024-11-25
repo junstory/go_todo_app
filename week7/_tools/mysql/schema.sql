@@ -2,7 +2,7 @@ CREATE TABLE `user`
 (
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '사용자 식별자',
     `name` VARCHAR(20) NOT NULL COMMENT 'asdasdasdasd',
-    `password` VARCHAR(20) NOT NULL COMMENT 'password hash',
+    `password` VARCHAR(255) NOT NULL COMMENT 'password hash',
     `role` VARCHAR(80) NOT NULL COMMENT 'user_role',
     `created` DATETIME(6) NOT NULL COMMENT 'record created time',
     `modified` DATETIME(6) NOT NULL COMMENT 'record modified time',

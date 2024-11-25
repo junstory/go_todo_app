@@ -10,7 +10,8 @@ require (
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/google/go-cmp v0.6.0
 	github.com/jmoiron/sqlx v1.4.0
-	github.com/junstory/go_todo_app/week6 v0.0.0-20241112113932-fd485b1d8921
+	github.com/matryer/moq v0.5.1
+	golang.org/x/crypto v0.29.0
 	golang.org/x/sync v0.9.0
 )
 
@@ -21,8 +22,9 @@ require (
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
 	github.com/stretchr/testify v1.9.0 // indirect
-	golang.org/x/crypto v0.19.0 // indirect
-	golang.org/x/net v0.21.0 // indirect
-	golang.org/x/sys v0.23.0 // indirect
-	golang.org/x/text v0.14.0 // indirect
+	golang.org/x/mod v0.20.0 // indirect
+	golang.org/x/net v0.31.0 // indirect
+	golang.org/x/sys v0.27.0 // indirect
+	golang.org/x/text v0.20.0 // indirect
+	golang.org/x/tools v0.24.0 // indirect
 )

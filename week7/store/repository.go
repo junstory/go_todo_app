@@ -3,6 +3,7 @@ package store
 import (
 	"context"
 	"database/sql"
+	"errors"
 	"fmt"
 	"time"
 
@@ -10,6 +11,14 @@ import (
 	"github.com/jmoiron/sqlx"
 	"github.com/junstory/go_todo_app/week7/clock"
 	"github.com/junstory/go_todo_app/week7/config"
+)
+
+const (
+	ErrCodeDuplicateEntry = 1062
+)
+
+var (
+	ErrAlreadyEntry = errors.New("duplicate entry")
 )
 
 func New(ctx context.Context, cfg *config.Config) (*sqlx.DB, func(), error) {

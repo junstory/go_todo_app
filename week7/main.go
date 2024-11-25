@@ -7,7 +7,7 @@ import (
 	"net"
 	"os"
 
-	"github.com/junstory/go_todo_app/week6/config"
+	"github.com/junstory/go_todo_app/week7/config"
 )
 
 func main() {
