@@ -6,7 +6,7 @@ import (
 	"github.com/junstory/go_todo_app/week8/entity"
 )
 
-//go:generate go run github.com/matryer/moq -out moq_test.go . ListTasksService AddTaskService RegisterUserService LoginUserService
+//go:generate go run github.com/matryer/moq -out moq_test.go . ListTasksService AddTaskService RegisterUserService LoginService
 type ListTasksService interface {
 	ListTasks(ctx context.Context) (entity.Tasks, error)
 }
@@ -19,6 +19,6 @@ type RegisterUserService interface {
 	RegisterUser(ctx context.Context, name, password, role string) (*entity.User, error)
 }
 
-type LoginUserService interface {
+type LoginService interface {
 	Login(ctx context.Context, name, pw string) (string, error)
 }

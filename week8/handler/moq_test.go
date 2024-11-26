@@ -231,26 +231,26 @@ func (mock *RegisterUserServiceMock) RegisterUserCalls() []struct {
 	return calls
 }
 
-// Ensure, that LoginUserServiceMock does implement LoginUserService.
+// Ensure, that LoginServiceMock does implement LoginService.
 // If this is not the case, regenerate this file with moq.
-var _ LoginUserService = &LoginUserServiceMock{}
+var _ LoginService = &LoginServiceMock{}
 
-// LoginUserServiceMock is a mock implementation of LoginUserService.
+// LoginServiceMock is a mock implementation of LoginService.
 //
-//	func TestSomethingThatUsesLoginUserService(t *testing.T) {
+//	func TestSomethingThatUsesLoginService(t *testing.T) {
 //
-//		// make and configure a mocked LoginUserService
-//		mockedLoginUserService := &LoginUserServiceMock{
+//		// make and configure a mocked LoginService
+//		mockedLoginService := &LoginServiceMock{
 //			LoginFunc: func(ctx context.Context, name string, pw string) (string, error) {
 //				panic("mock out the Login method")
 //			},
 //		}
 //
-//		// use mockedLoginUserService in code that requires LoginUserService
+//		// use mockedLoginService in code that requires LoginService
 //		// and then make assertions.
 //
 //	}
-type LoginUserServiceMock struct {
+type LoginServiceMock struct {
 	// LoginFunc mocks the Login method.
 	LoginFunc func(ctx context.Context, name string, pw string) (string, error)
 
@@ -270,9 +270,9 @@ type LoginUserServiceMock struct {
 }
 
 // Login calls LoginFunc.
-func (mock *LoginUserServiceMock) Login(ctx context.Context, name string, pw string) (string, error) {
+func (mock *LoginServiceMock) Login(ctx context.Context, name string, pw string) (string, error) {
 	if mock.LoginFunc == nil {
-		panic("LoginUserServiceMock.LoginFunc: method is nil but LoginUserService.Login was just called")
+		panic("LoginServiceMock.LoginFunc: method is nil but LoginService.Login was just called")
 	}
 	callInfo := struct {
 		Ctx  context.Context
@@ -292,8 +292,8 @@ func (mock *LoginUserServiceMock) Login(ctx context.Context, name string, pw str
 // LoginCalls gets all the calls that were made to Login.
 // Check the length with:
 //
-//	len(mockedLoginUserService.LoginCalls())
-func (mock *LoginUserServiceMock) LoginCalls() []struct {
+//	len(mockedLoginService.LoginCalls())
+func (mock *LoginServiceMock) LoginCalls() []struct {
 	Ctx  context.Context
 	Name string
 	Pw   string
