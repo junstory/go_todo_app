@@ -18,7 +18,7 @@ CREATE TABLE `task`
     `status` VARCHAR(80) NOT NULL COMMENT 'task_status',
     `created` DATETIME(6) NOT NULL COMMENT 'record created time',
     `modified` DATETIME(6) NOT NULL COMMENT 'record modified time',   
-    PRIMARY KEY (`id`)
+    PRIMARY KEY (`id`),
     CONSTRAINT `fk_user_id` 
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
             ON DELETE RESTRICT ON UPDATE RESTRICT
