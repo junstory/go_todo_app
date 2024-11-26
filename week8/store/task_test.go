@@ -93,6 +93,7 @@ func TestRepository_AddTask(t *testing.T) {
 	c := clock.FixedClocker{}
 	var wantID int64 = 20
 	okTask := &entity.Task{
+		UserID:   33,
 		Title:    "ok task",
 		Status:   "todo",
 		Created:  c.Now(),
@@ -105,8 +106,8 @@ func TestRepository_AddTask(t *testing.T) {
 	}
 	t.Cleanup(func() { _ = db.Close() })
 	mock.ExpectExec(
-		`INSERT INTO task \(title, status, created, modified\) VALUES \(\?, \?, \?, \?\)`,
-	).WithArgs(okTask.Title, okTask.Status, okTask.Created, okTask.Modified).
+		`INSERT INTO task \(user_id, title, status, created, modified\) VALUES \(\?, \?, \?, \?, \?\)`,
+	).WithArgs(okTask.UserID, okTask.Title, okTask.Status, okTask.Created, okTask.Modified).
 		WillReturnResult(sqlmock.NewResult(wantID, 1))
 
 	xdb := sqlx.NewDb(db, "mysql")
